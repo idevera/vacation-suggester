@@ -3,49 +3,78 @@
 	<head>
 		<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
 		<link href="css/styles.css" rel="stylesheet" type="text/css">
-		<script src="js/jquery--3.1.1.js"></script>
+		<script src="js/jquery-3.1.1.js"></script>
 		<script src="js/scripts.js"></script>
 		<title>Vacation Suggester</title>
 	</head>
 	<body>
 		<div class="container">
-			<h1>Where should you vacation to next?</h1>
+			<h1>Where Is Your Next Vacation?</h1>
+
+			<!--Form starts here-->
 			<form id="vacation">
 
-			<!--Select Box for choosing the season-->
+				<!--Select Box for choosing the season-->
+				<p>During what season do you want to travel?</p>
+				<select class="form-control" id="season">
+					<option value="1">Winter</option>
+					<option value="2">Spring</option>
+					<option value="3">Summer</option>
+					<option value="4">Autumn</option>
+				</select>
 
-			<p>During what season do you want to travel?</p>
-			<select class="form-control" id="season">
-				<option>Winter</option>
-				<option>Spring</option>
-				<option>Summer</option>
-				<option>Autumn</option>
-			</select>
+				<!--Form box for choosing length of stay-->
+				<div class="form-group">
+	        <label for="length-of-stay">How long is your vacation?</label>
+	        <input id="length-of-stay" class="form-control" type="text">
+	      </div>
 
-			<!--Radio button for choosing your budget-->
-			<div class="radio">
-				<label>
-					<input type="radio" name="budget" value="under1000">
-				</label>
-			</div>
-			<div class="radio">
-				<label>
-					<input type="radio" name="budget" value="1000to2000">
-				</label>
-			</div>
-			<div class="radio">
-				<label>
-					<input type="radio" name="budget" value="2000greater">
-				</label>
-			</div>
+				<!--Radio button for choosing your budget-->
+				<div class="radio">
+					<label>
+						<input type="radio" name="budget" value="under-1k">Less than $1000
+					</label>
+				</div>
+				<div class="radio">
+					<label>
+						<input type="radio" name="budget" value="1k-2k">$1000 - $2000
+					</label>
+				</div>
+				<div class="radio">
+					<label>
+						<input type="radio" name="budget" value="no-budget">I have no budget
+					</label>
+				</div>
 
-			<!--
+				<!--Select Box for choosing the season-->
+				<p>What do you want to do during your vacation?</p>
+				<select class="form-control" id="attractions">
+					<option value="1">Lay on the beach and go swimming</option>
+					<option value="2">Go hiking and sign up for nature explorations</option>
+					<option value="3">All I want to do is shop and eat in the city</option>
+					<option value="4">I love learning about history and visiting museums</option>
+				</select>
 
+				<!--Select Box for choosing travel type-->
+				<p>What is your preferred transportation method?</p>
+				<select class="form-control" id="transportation">
+					<option value ="1">Rent a car</option>
+					<option value="2">Rent a bike/walk</option>
+					<option value="3">Take the local train/buses/taxis</option>
+				</select>
 
-
+				<button type="submit" class="btn">Show my vacation spot!</button>
+			</form>
 
 			<!--Output-->
-			<p>Maldives</p>
-			<p>New Zealand</p>
-			<p>United Arab Emirates</p>
-			<p>Greenland</p>
+			<div class="container" id="output">
+				<p>You may want to visit <span id="result"></span> for your next vacation!</p>
+			</div>
+			<!--<p>Maldives</p>
+				<p>Thailand</p>
+				<p>United Arab Emirates</p>
+				<p>Greenland</p>
+				<p>Netherlands</p>-->
+		</div>
+	</body>
+</html>
