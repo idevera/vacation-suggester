@@ -6,3 +6,9 @@ body {
 	text-align: center;
 	width: 100%;
 }
+
+#output {
+	display: none;
+	text-align: center;
+	font-size: 36px;
+}
