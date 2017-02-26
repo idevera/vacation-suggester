@@ -1,10 +1,13 @@
 body {
-	background-color: #cce6ff;
+	background-color: #000;
+	color: white;
 }
 
 .jumbotron {
+	background-color: #000;
 	text-align: center;
 	width: 100%;
+
 }
 
 #output {
