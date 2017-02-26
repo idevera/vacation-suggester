@@ -13,24 +13,23 @@ $(document).ready(function() {
 		var greenland = "Greenland";
 		var netherlands = "Netherlands";
 
-
-		if (length > 5 && budget === "no-budget" && attractions === 1) {
+		if (name.length === 0 || !length || !budget ) {
+			alert("Please fill in all fields");
+		} else if (budget === "no-budget" && attractions === 1) {
 			$("#result").text(maldives); 
 			$("span#name").text(name);
-		} else if ((season === 1 || season === 2) && budget === "under-1k" && (transportation === 1 || transportation === 3)) {
+		} else if (season != 4 && budget === "under-1k" && transportation != 2) {
 			$("#result").text(thailand);
 			$("span#name").text(name);
-		} else if ((season === 1 || season === 2) && budget === "no-budget" && (attractions === 1 || attractions === 3)) {
+		} else if ((season === 1 || season === 2) && budget === "no-budget") {
 			$("#result").text(uae);
 			$("span#name").text(name);
 		} else if ((season === 1 || season === 3) && budget === "1k-2k" && attractions === 2) {
 			$("#result").text(greenland);
 			$("span#name").text(name);
-		} else if ((budget === "under-1k" || budget === "no-budget") && attractions != 1) {
+		} else {
 			$("#result").text(netherlands);
 			$("span#name").text(name);
-		} else {
-			alert("Please fill in all fields");
 		}
 
 		event.preventDefault();
