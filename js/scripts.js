@@ -19,28 +19,32 @@ $(document).ready(function() {
 			$("#result").text(maldives); 
 			$("span#name").text(name);
 			$("div#suggester").hide();
-			$("p#maldives").show();
+			$("#output").show();
+			$("#maldives").show();
 		} else if (season != 4 && budget === "under-1k" && transportation != 2) {
 			$("#result").text(thailand);
 			$("span#name").text(name);
 			$("div#suggester").hide();
-			$("p#thailand").show();
+			$("#output").show();
+			$("#thailand").show();
 		} else if ((season === 1 || season === 2) && budget === "no-budget") {
 			$("#result").text(uae);
 			$("span#name").text(name);
 			$("div#suggester").hide();
-			$("p#uae").show();
+			$("#output").show();
+			$("#uae").show();
 		} else if ((season === 1 || season === 3) && budget === "1k-2k" && attractions === 2) {
 			$("#result").text(greenland);
 			$("span#name").text(name);
 			$("div#suggester").hide();
-			$("p#greenland").show();
+			$("#output").show();
+			$("#greenland").show();
 		} else {
 			$("#result").text(netherlands);
 			$("span#name").text(name);
 			$("div#suggester").hide();
-			$("p#netherlands").show();
-
+			$("#output").show();
+			$("#netherlands").show();
 		}
 
 		event.preventDefault();

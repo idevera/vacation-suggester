@@ -1,17 +1,13 @@
 body {
-	background-color: #000;
-	color: white;
+	font-size: 16px;
+	font-weight: bold;
 }
 
 .jumbotron {
-	background-color: #000;
 	text-align: center;
 	width: 100%;
-
 }
 
-#output {
+#output, #maldives, #thailand, #uae, #greenland, #netherlands {
 	display: none;
-	text-align: center;
-	font-size: 36px;
 }
