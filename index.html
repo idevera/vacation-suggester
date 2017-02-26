@@ -8,16 +8,17 @@
 		<title>Vacation Suggester</title>
 	</head>
 	<body>
-		<div class="container">
+		<div class="jumbotron">
 			<h1>Where Is Your Next Vacation?</h1>
-
+		</div>
 			<!--Form starts here-->
+		<div class="container">
 			<form id="vacation">
 
 				<!--Select Box for choosing the season-->
 				<div class="form-group">
 	        <label for="name">First Name:</label>
-	        <input id="name" class="form-control" type="text">
+	        <input id="name" class="form-control input-lg" type="text">
 	      </div>
 
 				<p>During what season do you want to travel?</p>
@@ -70,16 +71,10 @@
 
 				<button type="submit" class="btn">Show my vacation spot!</button>
 			</form>
-
-			<!--Output-->
-			<div class="container" id="output">
-				<p><span id="name"></span>, you may want to visit <span id="result"></span> for your next vacation!</p>
-			</div>
-			<!--<p>Maldives</p>
-				<p>Thailand</p>
-				<p>United Arab Emirates</p>
-				<p>Greenland</p>
-				<p>Netherlands</p>-->
+		</div>
+		<!--Output-->
+		<div class="container" id="output">
+			<p><span id="name"></span>, you may want to visit <span id="result"></span> for your next vacation!</p>
 		</div>
 	</body>
 </html>
