@@ -1,5 +1,4 @@
 body {
-	font-size: 16px;
 	font-weight: bold;
 }
 
@@ -10,4 +9,8 @@ body {
 
 #output, #maldives, #thailand, #uae, #greenland, #netherlands {
 	display: none;
+}
+
+h2 {
+	text-align: center;
 }
