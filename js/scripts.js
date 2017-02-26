@@ -1,5 +1,6 @@
 $(document).ready(function() {
 	$("form#vacation").submit(function(event) {
+		var name = $("input#name").val();
 		var season = parseInt($("select#season").val());
 		var length = parseInt($("input#length-of-stay").val());
 		var budget = $("input:radio[name=budget]:checked").val();
@@ -14,16 +15,23 @@ $(document).ready(function() {
 
 
 		if (length > 5 && budget === "no-budget" && attractions === 1) {
-			$("#result").text(maldives)
+			$("#result").text(maldives); 
+			$("span#name").text(name);
 		} else if (season === 1 || season === 2 && budget === "under-1k" && transportation === 1 || transportation === 3) {
-			$("#result").text(thailand)
+			$("#result").text(thailand);
+			$("span#name").text(name);
 		} else if (season === 1 || season === 2 && budget === "no-budget" && attractions === 1 || attractions === 3) {
-			$("#result").text(uae)
+			$("#result").text(uae);
+			$("span#name").text(name);
 		} else if (season === 1 || season === 3 && budget === "1k-2k" && attractions === 2) {
-			$("#result").text(greenland)
+			$("#result").text(greenland);
+			$("span#name").text(name);
+		} else if {
+			$("#result").text(netherlands);
+			$("span#name").text(name);
 		} else {
-			$("#result").text(netherlands)
-		} 
+			alert('Please fill in all fields');
+		}
 
 		event.preventDefault();
 	});

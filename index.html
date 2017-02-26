@@ -15,6 +15,11 @@
 			<form id="vacation">
 
 				<!--Select Box for choosing the season-->
+				<div class="form-group">
+	        <label for="name">First Name:</label>
+	        <input id="name" class="form-control" type="text">
+	      </div>
+
 				<p>During what season do you want to travel?</p>
 				<select class="form-control" id="season">
 					<option value="1">Winter</option>
@@ -68,7 +73,7 @@
 
 			<!--Output-->
 			<div class="container" id="output">
-				<p>You may want to visit <span id="result"></span> for your next vacation!</p>
+				<p><span id="name"></span>, you may want to visit <span id="result"></span> for your next vacation!</p>
 			</div>
 			<!--<p>Maldives</p>
 				<p>Thailand</p>
